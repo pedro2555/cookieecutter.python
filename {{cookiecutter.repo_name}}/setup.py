@@ -43,17 +43,15 @@ test_requirements = [
 
 setup(
     name='{{ cookiecutter.package_dist_name }}',
-    version=versioneer.get_version(),
-    cmdclass=versioneer.get_cmdclass(),
     description="{{ cookiecutter.project_short_description }}",
-    long_description=readme + '\n\n' + history,
+    long_description=readme,
     author="{{ cookiecutter.full_name }}",
     author_email='{{ cookiecutter.email }}',
     url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}',
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
     include_package_data=True,
     install_requires=requirements,
-    license="MIT",
+    license="GPLv2",
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
